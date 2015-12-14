@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     @IBAction func NumberPressed(btn: UIButton){
         PlayBtnSound()
         CurrentNumber += "\(btn.tag)"
-        UpdateScreenOutput()
+        ScreenOutput.text = CurrentNumber
     }
     
     @IBAction func AddPressed(sender: AnyObject){
@@ -112,9 +112,5 @@ class ViewController: UIViewController {
         }
     }
     
-    func UpdateScreenOutput() {
-        ScreenOutput.text = CurrentNumber
-    }
-
 }
 
